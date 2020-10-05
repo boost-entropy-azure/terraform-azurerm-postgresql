@@ -27,14 +27,16 @@ variable "backup_retention_days" {
   default     = 7
 }
 
-variable "geo_redundant_backup" {
+variable "geo_redundant_backup_enabled" {
   description = "Enable / Disable geo-redundant for server backup."
-  default     = "Disabled"
+  default     = false
+  type        = bool
 }
 
-variable "storage_auto_grow" {
+variable "storage_auto_grow_enabled" {
   description = "Enable / Disable auto growing of storage."
-  default     = "Enabled"
+  default     = true
+  type        = bool
 }
 
 variable "administrator" {
